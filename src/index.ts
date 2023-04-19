@@ -7,8 +7,11 @@ import cors from 'cors';
 
 import mongoose from 'mongoose';
 import router from "./router";
+import {fileURLToPath} from "url";
+import path from "path";
 
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 5005;
 app.use(cors({
